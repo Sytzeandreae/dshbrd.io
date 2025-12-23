@@ -14,12 +14,12 @@ tags:
 ingredients:
   - group: "The Dal"
     items:
-      - qty: 1.5
-        unit: "cup"
+      - qty: 300
+        unit: "g"
         item: "toor dal (split pigeon peas)"
         note: "or substitute chana dal or red lentils"
-      - qty: 6
-        unit: "cup"
+      - qty: 1.4
+        unit: "L"
         item: "water"
       - qty: 1
         unit: "tsp"

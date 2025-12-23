@@ -121,14 +121,14 @@ ingredients:
       - qty: 2
         unit: "tbsp"
         item: "butter"
-      - qty: 0.5
-        unit: "cup"
+      - qty: 120
+        unit: "ml"
         item: "heavy cream"
-      - qty: [6, 8]          # Range: displays as "6-8"
-        unit: "cup"
+      - qty: [1.5, 2]        # Range: displays as "1.5-2"
+        unit: "L"
         item: "chicken stock"
-      - qty: 1
-        unit: "lb"
+      - qty: 450
+        unit: "g"
         item: "chicken thighs"
         prep: "cut into pieces"
         note: "boneless, skinless"
@@ -149,7 +149,7 @@ ingredients:
 
 **Available Units:**
 
-`tbsp`, `tsp`, `cup`, `oz`, `lb`, `g`, `kg`, `ml`, `L`, `inch`, `clove`, `sprig`, `can`, `piece`, `head`, `bunch`
+`tbsp`, `tsp`, `g`, `kg`, `ml`, `L`, `cm`, `clove`, `sprig`, `can`, `piece`, `head`, `bunch`
 
 ### Available Tags
 

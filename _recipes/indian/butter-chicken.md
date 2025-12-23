@@ -13,12 +13,12 @@ tags:
 ingredients:
   - group: "For the Chicken Marinade"
     items:
-      - qty: 2
-        unit: "lb"
+      - qty: 900
+        unit: "g"
         item: "boneless, skinless chicken thighs"
-        prep: "cut into 2-inch pieces"
-      - qty: 1
-        unit: "cup"
+        prep: "cut into 5 cm pieces"
+      - qty: 240
+        unit: "ml"
         item: "whole-milk yogurt"
       - qty: 2
         unit: "tbsp"
@@ -60,8 +60,8 @@ ingredients:
         unit: "clove"
         item: "garlic"
         prep: "roughly chopped"
-      - qty: 2
-        unit: "inch"
+      - qty: 5
+        unit: "cm"
         item: "fresh ginger"
         prep: "roughly chopped"
       - qty: 2
@@ -88,11 +88,11 @@ ingredients:
       - qty: 1
         unit: "tsp"
         item: "kosher salt"
-      - qty: 1
-        unit: "cup"
+      - qty: 240
+        unit: "ml"
         item: "water"
-      - qty: 0.75
-        unit: "cup"
+      - qty: 180
+        unit: "ml"
         item: "heavy cream"
       - qty: 2
         unit: "tbsp"

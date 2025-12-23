@@ -42,8 +42,8 @@ tags:
 ingredients:
   - group: "Main Ingredients"
     items:
-      - qty: 2
-        unit: "lb"
+      - qty: 900
+        unit: "g"
         item: "chicken thighs"
 ---
 

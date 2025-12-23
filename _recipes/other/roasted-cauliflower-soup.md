@@ -37,14 +37,13 @@ ingredients:
       - qty: 1
         unit: "tsp"
         item: "ground cumin"
-      - qty: [6, 8]
-        unit: "cup"
+      - qty: [1.4, 1.9]
+        unit: "L"
         item: "chicken stock"
         prep: "warmed"
-      - qty: 2
-        unit: "cup"
+      - qty: 480
+        unit: "ml"
         item: "heavy cream"
-        note: "500 ml"
       - qty: 1
         item: "lemon"
         prep: "zested"
@@ -61,8 +60,8 @@ ingredients:
       - item: "Kosher salt and black pepper"
   - group: "For the Garnish"
     items:
-      - qty: 0.5
-        unit: "cup"
+      - qty: 50
+        unit: "g"
         item: "sliced almonds"
         prep: "toasted"
 ---

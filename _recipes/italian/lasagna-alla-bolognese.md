@@ -31,19 +31,19 @@ ingredients:
         item: "celery stalks"
         prep: "finely diced"
       - item: "Kosher salt"
-      - qty: 1.5
-        unit: "lb"
+      - qty: 680
+        unit: "g"
         item: "ground beef chuck"
         note: "not too lean—you need the fat"
-      - qty: 1
-        unit: "lb"
+      - qty: 450
+        unit: "g"
         item: "ground veal"
         note: "or use all beef"
-      - qty: 1
-        unit: "cup"
+      - qty: 240
+        unit: "ml"
         item: "dry white wine"
-      - qty: 1
-        unit: "cup"
+      - qty: 240
+        unit: "ml"
         item: "whole milk"
       - qty: 1
         unit: "can"
@@ -53,8 +53,8 @@ ingredients:
       - qty: 2
         unit: "tbsp"
         item: "tomato paste"
-      - qty: 2
-        unit: "cup"
+      - qty: 480
+        unit: "ml"
         item: "beef or chicken stock"
       - qty: 1
         item: "Parmigiano-Reggiano rind"
@@ -71,8 +71,8 @@ ingredients:
       - qty: 6
         unit: "tbsp"
         item: "all-purpose flour"
-      - qty: 6
-        unit: "cup"
+      - qty: 1.4
+        unit: "L"
         item: "whole milk"
         prep: "warmed"
       - qty: 1
@@ -87,12 +87,12 @@ ingredients:
         item: "white pepper"
   - group: "For Assembly"
     items:
-      - qty: 1
-        unit: "lb"
+      - qty: 450
+        unit: "g"
         item: "dried lasagna noodles"
-        note: "or 1.5 lb fresh egg pasta sheets"
-      - qty: 2
-        unit: "cup"
+        note: "or 680 g fresh egg pasta sheets"
+      - qty: 120
+        unit: "g"
         item: "freshly grated Parmigiano-Reggiano"
         note: "divided"
       - qty: 2

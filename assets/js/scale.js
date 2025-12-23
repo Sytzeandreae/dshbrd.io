@@ -71,14 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const unitNames = {
       tbsp: 'tablespoon',
       tsp: 'teaspoon',
-      cup: 'cup',
-      oz: 'oz',
-      lb: 'lb',
       g: 'g',
       kg: 'kg',
       ml: 'ml',
       L: 'L',
-      inch: 'inch',
+      cm: 'cm',
       clove: 'clove',
       sprig: 'sprig',
       can: 'can',
@@ -88,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const singular = unitNames[unit] || unit;
-    const nonPluralUnits = ['oz', 'lb', 'g', 'kg', 'ml', 'L'];
+    const nonPluralUnits = ['g', 'kg', 'ml', 'L', 'cm'];
 
     if (qty > 1 && singular.length > 2 && !nonPluralUnits.includes(unit)) {
       return singular + 's';

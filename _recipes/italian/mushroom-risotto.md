@@ -13,21 +13,21 @@ tags:
 ingredients:
   - group: "The Stock"
     items:
-      - qty: 6
-        unit: "cup"
+      - qty: 1.4
+        unit: "L"
         item: "vegetable or chicken stock"
         prep: "warm"
-      - qty: 1
-        unit: "oz"
+      - qty: 30
+        unit: "g"
         item: "dried porcini mushrooms"
-      - qty: 1
-        unit: "cup"
+      - qty: 240
+        unit: "ml"
         item: "hot water"
         note: "for soaking porcini"
   - group: "The Mushrooms"
     items:
-      - qty: 1
-        unit: "lb"
+      - qty: 450
+        unit: "g"
         item: "mixed fresh mushrooms"
         prep: "cleaned and sliced"
         note: "cremini, shiitake, oyster"
@@ -52,12 +52,12 @@ ingredients:
         unit: "clove"
         item: "garlic"
         prep: "minced"
-      - qty: 1.5
-        unit: "cup"
+      - qty: 300
+        unit: "g"
         item: "Arborio rice"
         note: "or Carnaroli if available"
-      - qty: 0.5
-        unit: "cup"
+      - qty: 120
+        unit: "ml"
         item: "dry white wine"
       - qty: 0.5
         unit: "tsp"
@@ -68,8 +68,8 @@ ingredients:
         unit: "tbsp"
         item: "cold unsalted butter"
         prep: "cubed"
-      - qty: 0.75
-        unit: "cup"
+      - qty: 60
+        unit: "g"
         item: "freshly grated Parmigiano-Reggiano"
         note: "plus more for serving"
       - qty: 2
