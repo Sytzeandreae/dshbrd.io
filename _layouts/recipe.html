@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article class="recipe">
+  <header class="recipe-header">
+    <div class="recipe-meta">
+      <a href="/tags/{{ page.cuisine }}/" class="cuisine">{{ page.cuisine | cuisine_name }}</a>
+      <span class="protein">{{ page.protein }}</span>
+      <span class="time">{{ page.totalTime | format_time }}</span>
+      <span class="serves">Serves {{ page.serves }}</span>
+    </div>
+    <div class="recipe-tags">
+      {% for tag in page.tags %}
+        <a href="/tags/{{ tag }}/" class="tag">{{ tag }}</a>
+      {% endfor %}
+    </div>
+  </header>
+
+  <div class="recipe-content">
+    {% if page.ingredients %}
+      {% include ingredients.html %}
+    {% endif %}
+    {{ content }}
+  </div>
+
+  <footer class="recipe-footer">
+    <a href="/" class="back-link">&larr; Back to all recipes</a>
+  </footer>
+</article>
+
+{% if page.ingredients %}
+<script src="{{ '/assets/js/scale.js' | relative_url }}"></script>
+{% endif %}

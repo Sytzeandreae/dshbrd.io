@@ -1,0 +1,41 @@
+<section class="recipe-ingredients" data-base-servings="{{ page.serves }}">
+  <div class="serving-control">
+    <h3>Ingredients</h3>
+    <div class="serving-adjuster">
+      <button class="serving-btn minus" aria-label="Decrease servings">-</button>
+      <span class="serving-display">
+        <span class="serving-count">{{ page.serves }}</span> servings
+      </span>
+      <button class="serving-btn plus" aria-label="Increase servings">+</button>
+    </div>
+  </div>
+
+  {% for group in page.ingredients %}
+  <div class="ingredient-group">
+    {% if group.group %}
+    <h4>{{ group.group }}</h4>
+    {% endif %}
+    <ul class="ingredient-list">
+      {% for ing in group.items %}
+      <li class="ingredient{% if ing.optional %} optional{% endif %}"
+          {% if ing.qty %}data-qty="{% if ing.qty.first %}{{ ing.qty | join: ',' }}{% else %}{{ ing.qty }}{% endif %}"{% endif %}
+          {% if ing.unit %}data-unit="{{ ing.unit }}"{% endif %}>
+        <span class="quantity">
+          {%- if ing.qty -%}
+            {%- if ing.qty.first -%}
+              {{ ing.qty | first | format_quantity }}-{{ ing.qty | last | format_quantity }}
+            {%- else -%}
+              {{ ing.qty | format_quantity }}
+            {%- endif -%}
+          {%- endif -%}
+        </span>
+        {%- if ing.unit %} <span class="unit">{{ ing.unit | format_unit: ing.qty }}</span>{% endif %}
+        <span class="item">{{ ing.item }}</span>
+        {%- if ing.prep %}<span class="prep">, {{ ing.prep }}</span>{% endif %}
+        {%- if ing.note %} <span class="note">({{ ing.note }})</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</section>

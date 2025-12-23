@@ -1,0 +1,29 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby/Bundler
+vendor/
+.bundle/
+Gemfile.lock
+
+# Claude Code / Agent files
+.claude/
+CLAUDE.md
+INDEX.md
+MEAL-QUEUE.md
+WISHLIST.md
+import/
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Misc
+*.log

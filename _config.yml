@@ -1,0 +1,48 @@
+# Site settings
+title: Recipe Collection
+description: Deeply flavorful, make-ahead friendly recipes with proper technique
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Collections
+collections:
+  recipes:
+    output: true
+    permalink: /recipes/:path/
+
+# Default frontmatter
+defaults:
+  - scope:
+      path: ""
+      type: "recipes"
+    values:
+      layout: "recipe"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - .claude/
+  - README.md
+  - CLAUDE.md
+  - INDEX.md
+  - import/
+  - "*.njk"
+  - package.json
+  - package-lock.json
+  - .eleventy.js
+  - .eleventyignore
+
+# Include underscore files
+include:
+  - _recipes
+
+# Plugins (safe for GitHub Actions)
+plugins:
+  - jekyll-seo-tag

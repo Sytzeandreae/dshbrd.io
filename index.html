@@ -1,0 +1,43 @@
+---
+layout: default
+title: All Recipes
+---
+<div class="recipe-index">
+  <div class="filters">
+    <div class="filter-group">
+      <label for="cuisine-filter">Cuisine:</label>
+      <select id="cuisine-filter">
+        <option value="">All Cuisines</option>
+        {% assign cuisines = site.recipes | map: "cuisine" | uniq | sort %}
+        {% for cuisine in cuisines %}
+          <option value="{{ cuisine }}">{{ cuisine | cuisine_name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Tags:</label>
+      <div class="tag-buttons">
+        {% assign all_tags = site.recipes | map: "tags" | join: "," | split: "," | uniq | sort %}
+        {% for tag in all_tags %}
+          {% if tag != "" %}
+          <button class="tag-filter" data-tag="{{ tag }}">{{ tag }}</button>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <button id="clear-filters" class="clear-btn">Clear Filters</button>
+  </div>
+
+  <p class="recipe-count"><span id="visible-count">{{ site.recipes | size }}</span> recipes</p>
+
+  <div class="recipe-grid">
+    {% assign sorted_recipes = site.recipes | sort: "title" %}
+    {% for recipe in sorted_recipes %}
+      {% include recipe-card.html %}
+    {% endfor %}
+  </div>
+</div>
+
+<script src="{{ '/assets/js/filter.js' | relative_url }}"></script>
