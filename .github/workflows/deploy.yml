@@ -46,7 +46,7 @@ jobs:
 
       - name: Encrypt HTML files
         run: |
-          find _site -name "*.html" -type f | while read file; do
+          find _site -name "*.html" -type f -print0 | while IFS= read -r -d '' file; do
             staticrypt "$file" "${{ secrets.SITE_PASSWORD }}" \
               --short \
               --template-title "Recipe Collection" \

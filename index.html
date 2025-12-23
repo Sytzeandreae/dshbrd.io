@@ -1,43 +1,116 @@
 ---
 layout: default
-title: All Recipes
+title: Home
 ---
-<div class="recipe-index">
-  <div class="filters">
-    <div class="filter-group">
-      <label for="cuisine-filter">Cuisine:</label>
-      <select id="cuisine-filter">
-        <option value="">All Cuisines</option>
-        {% assign cuisines = site.recipes | map: "cuisine" | uniq | sort %}
-        {% for cuisine in cuisines %}
-          <option value="{{ cuisine }}">{{ cuisine | cuisine_name }}</option>
-        {% endfor %}
-      </select>
-    </div>
+<div class="home-hero">
+  <h1>{{ site.title }}</h1>
+  <p class="hero-tagline">{{ site.description }}</p>
+</div>
 
-    <div class="filter-group">
-      <label>Tags:</label>
-      <div class="tag-buttons">
-        {% assign all_tags = site.recipes | map: "tags" | join: "," | split: "," | uniq | sort %}
-        {% for tag in all_tags %}
-          {% if tag != "" %}
-          <button class="tag-filter" data-tag="{{ tag }}">{{ tag }}</button>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-
-    <button id="clear-filters" class="clear-btn">Clear Filters</button>
+<section class="featured-section">
+  <h2>Featured Recipes</h2>
+  <div class="featured-grid" id="featured-grid">
+    {% assign sorted_recipes = site.recipes | sort: "title" %}
+    {% for recipe in sorted_recipes limit: 3 %}
+      {% include featured-card.html %}
+    {% endfor %}
   </div>
+</section>
 
-  <p class="recipe-count"><span id="visible-count">{{ site.recipes | size }}</span> recipes</p>
+<section class="browse-section">
+  <h2>Browse By</h2>
+  <div class="browse-grid">
+    {% assign cuisine_count = site.recipes | map: "cuisine" | uniq | size %}
+    <a href="/browse/cuisines/" class="browse-card">
+      <div class="browse-card-icon">&#127869;</div>
+      <h3>Cuisine</h3>
+      <p class="browse-card-count">{{ cuisine_count }} cuisines</p>
+    </a>
 
+    {% assign protein_count = site.recipes | map: "protein" | uniq | size %}
+    <a href="/browse/proteins/" class="browse-card">
+      <div class="browse-card-icon">&#129367;</div>
+      <h3>Protein</h3>
+      <p class="browse-card-count">{{ protein_count }} types</p>
+    </a>
+
+    {% assign quick_count = 0 %}
+    {% for recipe in site.recipes %}
+      {% if recipe.totalTime < 30 %}
+        {% assign quick_count = quick_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    <a href="/recipes/?time=quick" class="browse-card">
+      <div class="browse-card-icon">&#9201;</div>
+      <h3>Quick Meals</h3>
+      <p class="browse-card-count">Under 30 min</p>
+    </a>
+
+    {% assign makeahead_count = 0 %}
+    {% for recipe in site.recipes %}
+      {% if recipe.tags contains "make-ahead" %}
+        {% assign makeahead_count = makeahead_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    <a href="/recipes/?tags=make-ahead" class="browse-card">
+      <div class="browse-card-icon">&#128230;</div>
+      <h3>Make-Ahead</h3>
+      <p class="browse-card-count">{{ makeahead_count }} recipes</p>
+    </a>
+  </div>
+</section>
+
+<section class="recipes-preview-section">
+  <div class="section-header">
+    <h2>All Recipes</h2>
+    <a href="/recipes/" class="view-all-link">View All &rarr;</a>
+  </div>
   <div class="recipe-grid">
     {% assign sorted_recipes = site.recipes | sort: "title" %}
-    {% for recipe in sorted_recipes %}
+    {% for recipe in sorted_recipes limit: 6 %}
       {% include recipe-card.html %}
     {% endfor %}
   </div>
-</div>
+</section>
 
-<script src="{{ '/assets/js/filter.js' | relative_url }}"></script>
+<script>
+// Randomize featured recipes on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const featuredGrid = document.getElementById('featured-grid');
+  if (!featuredGrid) return;
+
+  const cards = Array.from(featuredGrid.children);
+  if (cards.length <= 3) return;
+
+  // Get all recipe data from the DOM
+  const allRecipes = {{ site.recipes | jsonify }};
+
+  // Shuffle and pick 3
+  const shuffled = allRecipes.sort(() => Math.random() - 0.5);
+  const featured = shuffled.slice(0, 3);
+
+  // Build new HTML
+  featuredGrid.innerHTML = featured.map(recipe => `
+    <article class="featured-card">
+      <a href="${recipe.url}">
+        <h3>${recipe.title}</h3>
+        <div class="featured-meta">
+          <span class="cuisine">${recipe.cuisine.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</span>
+          <span class="time">${formatTime(recipe.totalTime)}</span>
+          <span class="protein">${recipe.protein.charAt(0).toUpperCase() + recipe.protein.slice(1)}</span>
+        </div>
+        <div class="featured-tags">
+          ${(recipe.tags || []).slice(0, 3).map(tag => `<span class="tag">${tag}</span>`).join('')}
+        </div>
+      </a>
+    </article>
+  `).join('');
+
+  function formatTime(minutes) {
+    if (minutes < 60) return minutes + ' min';
+    const hours = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    return mins > 0 ? `${hours}h ${mins}m` : `${hours}h`;
+  }
+});
+</script>

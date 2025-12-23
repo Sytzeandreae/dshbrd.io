@@ -1,0 +1,68 @@
+<nav class="site-nav">
+  <div class="nav-brand">
+    <a href="/" class="site-title">{{ site.title }}</a>
+  </div>
+
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span class="hamburger"></span>
+  </button>
+
+  <div class="nav-menu">
+    <ul class="nav-links">
+      <li><a href="/" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+      <li><a href="/recipes/" {% if page.url == '/recipes/' %}class="active"{% endif %}>All Recipes</a></li>
+      <li class="nav-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false">
+          Browse
+          <span class="dropdown-arrow">&#9662;</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="/browse/cuisines/">By Cuisine</a></li>
+          <li><a href="/browse/proteins/">By Protein</a></li>
+          <li><a href="/browse/quick/">Quick Meals</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="nav-search">
+      <button class="search-toggle" aria-label="Search recipes">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+      </button>
+      <form class="search-form" action="/recipes/" method="get">
+        <input type="search" name="q" placeholder="Search recipes..." aria-label="Search recipes">
+        <button type="submit" aria-label="Submit search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<script>
+// Mobile navigation toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function() {
+      const isOpen = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+});
+</script>

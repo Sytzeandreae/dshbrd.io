@@ -1,0 +1,42 @@
+---
+layout: default
+title: Browse by Cuisine
+permalink: /browse/cuisines/
+---
+<div class="page-header">
+  <h1>Browse by Cuisine</h1>
+  <p class="page-tagline">Explore recipes from around the world</p>
+</div>
+
+<div class="browse-page">
+  <div class="category-grid">
+    {% assign cuisines_with_recipes = site.recipes | map: "cuisine" | uniq | sort %}
+    {% for cuisine in cuisines_with_recipes %}
+      {% assign cuisine_recipes = site.recipes | where: "cuisine", cuisine %}
+      {% assign count = cuisine_recipes | size %}
+      <a href="/recipes/?cuisine={{ cuisine }}" class="category-card">
+        <div class="category-icon">
+          {% case cuisine %}
+            {% when 'italian' %}&#127837;
+            {% when 'indian' %}&#127798;
+            {% when 'french' %}&#129366;
+            {% when 'east-asian' %}&#127843;
+            {% when 'southeast-asian' %}&#127834;
+            {% when 'middle-eastern' %}&#129477;
+            {% when 'mediterranean' %}&#127818;
+            {% when 'latin-american' %}&#127790;
+            {% when 'american' %}&#127828;
+            {% when 'jewish' %}&#127838;
+            {% else %}&#127860;
+          {% endcase %}
+        </div>
+        <h3>{{ cuisine | cuisine_name }}</h3>
+        <p class="category-count">{{ count }} recipe{% if count != 1 %}s{% endif %}</p>
+      </a>
+    {% endfor %}
+  </div>
+
+  <div class="back-link">
+    <a href="/">&larr; Back to Home</a>
+  </div>
+</div>

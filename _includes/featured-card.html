@@ -1,0 +1,15 @@
+<article class="featured-card">
+  <a href="{{ recipe.url | relative_url }}">
+    <h3>{{ recipe.title }}</h3>
+    <div class="featured-meta">
+      <span class="cuisine">{{ recipe.cuisine | cuisine_name }}</span>
+      <span class="time">{{ recipe.totalTime | format_time }}</span>
+      <span class="protein">{{ recipe.protein | capitalize }}</span>
+    </div>
+    <div class="featured-tags">
+      {%- for tag in recipe.tags limit: 3 -%}
+        <span class="tag">{{ tag }}</span>
+      {%- endfor -%}
+    </div>
+  </a>
+</article>

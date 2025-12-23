@@ -1,0 +1,40 @@
+---
+layout: default
+title: Browse by Protein
+permalink: /browse/proteins/
+---
+<div class="page-header">
+  <h1>Browse by Protein</h1>
+  <p class="page-tagline">Find the perfect recipe for your main ingredient</p>
+</div>
+
+<div class="browse-page">
+  <div class="category-grid">
+    {% assign proteins_with_recipes = site.recipes | map: "protein" | uniq | sort %}
+    {% for protein in proteins_with_recipes %}
+      {% assign protein_recipes = site.recipes | where: "protein", protein %}
+      {% assign count = protein_recipes | size %}
+      <a href="/recipes/?protein={{ protein }}" class="category-card">
+        <div class="category-icon">
+          {% case protein %}
+            {% when 'chicken' %}&#127831;
+            {% when 'fish' %}&#128031;
+            {% when 'seafood' %}&#129424;
+            {% when 'vegetarian' %}&#129382;
+            {% when 'beef' %}&#129385;
+            {% when 'veal' %}&#129385;
+            {% when 'lamb' %}&#128016;
+            {% when 'pork' %}&#128055;
+            {% else %}&#127860;
+          {% endcase %}
+        </div>
+        <h3>{{ protein | capitalize }}</h3>
+        <p class="category-count">{{ count }} recipe{% if count != 1 %}s{% endif %}</p>
+      </a>
+    {% endfor %}
+  </div>
+
+  <div class="back-link">
+    <a href="/">&larr; Back to Home</a>
+  </div>
+</div>

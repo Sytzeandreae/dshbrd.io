@@ -1,7 +1,10 @@
 <article class="recipe-card"
          data-cuisine="{{ recipe.cuisine }}"
-         data-tags="{% if recipe.tags %}{{ recipe.tags | join: ',' }}{% endif %}"
-         data-protein="{{ recipe.protein }}">
+         data-tags="{%- if recipe.tags -%}{{ recipe.tags | join: ',' }}{%- endif -%}"
+         data-protein="{{ recipe.protein }}"
+         data-time="{{ recipe.totalTime }}"
+         data-title="{{ recipe.title | downcase }}"
+         data-ingredients="{%- if recipe.ingredients -%}{%- for group in recipe.ingredients -%}{%- for item in group.items -%}{{ item.item | downcase }} {%- endfor -%}{%- endfor -%}{%- endif -%}">
   <a href="{{ recipe.url | relative_url }}">
     <h2>{{ recipe.title }}</h2>
     <div class="card-meta">
@@ -10,9 +13,9 @@
       <span class="protein">{{ recipe.protein }}</span>
     </div>
     <div class="card-tags">
-      {% for tag in recipe.tags %}
+      {%- for tag in recipe.tags -%}
         <span class="tag">{{ tag }}</span>
-      {% endfor %}
+      {%- endfor -%}
     </div>
   </a>
 </article>

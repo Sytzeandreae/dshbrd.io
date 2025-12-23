@@ -1,0 +1,69 @@
+---
+layout: default
+title: Quick Meals
+permalink: /browse/quick/
+---
+<div class="page-header">
+  <h1>Quick & Easy</h1>
+  <p class="page-tagline">Delicious meals for busy nights</p>
+</div>
+
+<div class="browse-page">
+  <div class="category-grid">
+    {% assign quick_count = 0 %}
+    {% for recipe in site.recipes %}
+      {% if recipe.totalTime < 30 %}
+        {% assign quick_count = quick_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    <a href="/recipes/?time=quick" class="category-card">
+      <div class="category-icon">&#9201;</div>
+      <h3>Quick</h3>
+      <p class="category-desc">Under 30 minutes</p>
+      <p class="category-count">{{ quick_count }} recipe{% if quick_count != 1 %}s{% endif %}</p>
+    </a>
+
+    {% assign weeknight_count = 0 %}
+    {% for recipe in site.recipes %}
+      {% if recipe.tags contains "weeknight" %}
+        {% assign weeknight_count = weeknight_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    <a href="/recipes/?tags=weeknight" class="category-card">
+      <div class="category-icon">&#127769;</div>
+      <h3>Weeknight</h3>
+      <p class="category-desc">Easy enough for busy nights</p>
+      <p class="category-count">{{ weeknight_count }} recipe{% if weeknight_count != 1 %}s{% endif %}</p>
+    </a>
+
+    {% assign makeahead_count = 0 %}
+    {% for recipe in site.recipes %}
+      {% if recipe.tags contains "make-ahead" %}
+        {% assign makeahead_count = makeahead_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    <a href="/recipes/?tags=make-ahead" class="category-card">
+      <div class="category-icon">&#128230;</div>
+      <h3>Make-Ahead</h3>
+      <p class="category-desc">Prep now, enjoy later</p>
+      <p class="category-count">{{ makeahead_count }} recipe{% if makeahead_count != 1 %}s{% endif %}</p>
+    </a>
+
+    {% assign onepot_count = 0 %}
+    {% for recipe in site.recipes %}
+      {% if recipe.tags contains "one-pot" %}
+        {% assign onepot_count = onepot_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    <a href="/recipes/?tags=one-pot" class="category-card">
+      <div class="category-icon">&#129369;</div>
+      <h3>One-Pot</h3>
+      <p class="category-desc">Minimal cleanup</p>
+      <p class="category-count">{{ onepot_count }} recipe{% if onepot_count != 1 %}s{% endif %}</p>
+    </a>
+  </div>
+
+  <div class="back-link">
+    <a href="/">&larr; Back to Home</a>
+  </div>
+</div>
