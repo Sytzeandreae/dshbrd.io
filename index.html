@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (cards.length <= 3) return;
 
   // Get all recipe data from the DOM
-  const allRecipes = {{ site.recipes | jsonify }};
+  const allRecipes = {{ site.recipes | recipe_cards_json }};
 
   // Shuffle and pick 3
   const shuffled = allRecipes.sort(() => Math.random() - 0.5);

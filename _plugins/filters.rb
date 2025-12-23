@@ -104,6 +104,23 @@ module Jekyll
       return "" if str.nil?
       str.to_s.gsub("-", " ").capitalize
     end
+
+    # Output only card-summary fields for recipes (excludes full content)
+    # Used for homepage featured recipe randomization
+    def recipe_cards_json(recipes)
+      require 'json'
+      cards = recipes.map do |recipe|
+        {
+          "title" => recipe["title"],
+          "url" => recipe.url,
+          "cuisine" => recipe["cuisine"],
+          "protein" => recipe["protein"],
+          "totalTime" => recipe["totalTime"],
+          "tags" => recipe["tags"] || []
+        }
+      end
+      JSON.generate(cards)
+    end
   end
 end
 
