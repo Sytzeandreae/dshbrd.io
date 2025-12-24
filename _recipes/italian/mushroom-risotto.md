@@ -59,6 +59,7 @@ ingredients:
       - qty: 120
         unit: "ml"
         item: "dry white wine"
+        note: "Pinot Grigio or Sauvignon Blanc—crisp and dry"
       - qty: 0.5
         unit: "tsp"
         item: "fine sea salt"
@@ -139,3 +140,9 @@ ingredients:
 - **Mushrooms:** Can be seared up to 2 days ahead and refrigerated. Reheat briefly in a hot pan before finishing the dish.
 - **Stock:** Homemade stock makes a noticeable difference here. Make a batch on the weekend and freeze in 2-cup portions.
 - **Leftovers:** Day-old risotto makes excellent arancini—form into balls, stuff with mozzarella if desired, bread, and deep fry until golden.
+
+---
+
+### Wine Notes
+
+*A note on the wine: Risotto loves acidity—it brightens the dish and keeps each bite from feeling too heavy. Reach for a crisp, dry white: Pinot Grigio brings clean, mineral notes that complement the earthy mushrooms without competing; Sauvignon Blanc adds a hint of herbaceousness that echoes the thyme. Avoid oaky wines—their buttery richness dulls the fresh, bright character you're after. The wine's job here is to deglaze the toasted rice and leave behind its acidity as the alcohol evaporates, so choose something with good backbone. And pour yourself a glass while you stir—risotto rewards the cook who keeps company with good wine.*

@@ -43,6 +43,36 @@ All recipes should be:
 - Fresh herbs, bright acids, and umami depth preferred over heavy cream or cheese
 - Balance is everything: salt, fat, acid, heat, umami
 
+## Wine in Cooking
+
+**The golden rule: If you wouldn't drink it, don't cook with it.** "Cooking wine" from the grocery store is salted and harsh—avoid it. Use a wine you'd enjoy in a glass; the dish deserves it.
+
+When a recipe calls for wine, always include:
+
+1. **Specific varietal recommendations** (2-3 options) in the ingredient note
+2. **Why those wines work**—explain the characteristics (acidity, body, tannins, fruit profile) that make them suitable
+3. **What to look for** if substituting—so the cook understands the principle
+
+### White Wine Guidance
+
+| Dish Type | Recommended Varietals | Why It Works |
+|-----------|----------------------|--------------|
+| Risotto, cream sauces, seafood | Pinot Grigio, Vermentino, Sauvignon Blanc | High acidity cuts through richness; crisp, clean flavors won't muddy the dish |
+| Chicken braises, butter sauces | Chardonnay (unoaked), Viognier | Fuller body adds weight; subtle fruitiness complements poultry |
+| Mussels, light fish | Muscadet, Albariño, dry Riesling | Mineral, bright, and light—enhances rather than overwhelms |
+
+### Red Wine Guidance
+
+| Dish Type | Recommended Varietals | Why It Works |
+|-----------|----------------------|--------------|
+| Long braises (ragù, stews) | Chianti, Sangiovese, Côtes du Rhône | Medium tannins soften during cooking; fruit-forward character adds depth without bitterness |
+| Rich meat dishes | Merlot, Grenache | Soft tannins, ripe fruit; won't turn bitter |
+| **Avoid for cooking** | High-tannin wines (Cabernet, Barolo) | Tannins concentrate and turn bitter during reduction |
+
+### Regional Matching
+
+When possible, match the wine to the cuisine—an Italian dish sings with Italian wine, French with French. This isn't snobbery; wines evolve alongside their regional cuisines, and the flavors harmonize naturally.
+
 ## Recipe Format
 
 Always use this structure:
@@ -94,6 +124,10 @@ tags:
 
 - **Component:** Storage time, method, reheating instructions
 - **Freezing:** What freezes well, how long, how to reheat
+
+### Wine Notes *(include when recipe uses wine)*
+
+*A note on the wine: [Educational paragraph covering varietal recommendations with reasoning, what characteristics to look for, what to avoid and why, and how the wine affects the final dish]*
 ```
 
 ### Frontmatter Fields
@@ -124,6 +158,10 @@ ingredients:
       - qty: 120
         unit: "ml"
         item: "heavy cream"
+      - qty: 120
+        unit: "ml"
+        item: "dry white wine"
+        note: "Pinot Grigio or Vermentino—crisp and acidic"
       - qty: [1.5, 2]        # Range: displays as "1.5-2"
         unit: "L"
         item: "chicken stock"

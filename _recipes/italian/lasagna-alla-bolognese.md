@@ -42,6 +42,7 @@ ingredients:
       - qty: 240
         unit: "ml"
         item: "dry white wine"
+        note: "Pinot Grigio or Vermentino—the acidity cuts through the richness"
       - qty: 240
         unit: "ml"
         item: "whole milk"
@@ -188,3 +189,9 @@ ingredients:
 ---
 
 *A note on tradition: In Bologna, they would use fresh egg pasta, often green with spinach, rolled thin enough to see your hand through. If you ever want to take this lasagna to its absolute peak, make fresh pasta. But I've made this hundreds of times with good dried noodles, and it's still extraordinary. The ragù is the soul—everything else is just clothing.*
+
+---
+
+### Wine Notes
+
+*A note on the wine: The Bolognese tradition calls for white wine in ragù, not red—and for good reason. A crisp, dry white like Pinot Grigio or Vermentino brings acidity that cuts through the richness of beef and butter, while its lighter flavor doesn't overpower the milk's delicate sweetness. Avoid oaked Chardonnay, which adds buttery notes that compete rather than complement. The wine should taste clean and slightly tart—think green apple and citrus rather than tropical fruit. Whatever you choose, make sure it's something you'd happily drink while cooking. When the ragù is finally done, you'll taste the wine's brightness woven into every layer.*
