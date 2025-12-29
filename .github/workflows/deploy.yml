@@ -41,20 +41,16 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install StaticCrypt
-        run: npm install -g staticrypt
-
-      - name: Encrypt HTML files
+      - name: Encrypt HTML files with PageCrypt
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
         run: |
-          find _site -name "*.html" -type f -print0 | while IFS= read -r -d '' file; do
-            staticrypt "$file" --password "${{ secrets.SITE_PASSWORD }}" \
-              --short \
-              --template-title "Recipe Collection" \
-              --template-instructions "Enter password to access recipes" \
-              --template-button "Unlock" \
-              --remember 30 \
-              -o "$file"
+          npm install -D pagecrypt
+          for file in $(find _site -name "*.html" -type f); do
+            echo "Encrypting: $file"
+            npx pagecrypt "$file" "$file" "$SITE_PASSWORD"
           done
+          echo "Encryption complete"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
