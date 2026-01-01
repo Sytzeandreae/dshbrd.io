@@ -41,14 +41,22 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Encrypt HTML files with PageCrypt
+      - name: Encrypt HTML files with StatiCrypt
         env:
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
         run: |
-          npm install -D pagecrypt
+          npm install -D staticrypt
           for file in $(find _site -name "*.html" -type f); do
             echo "Encrypting: $file"
-            npx pagecrypt "$file" "$file" "$SITE_PASSWORD" -t _pagecrypt-template.html
+            npx staticrypt "$file" -p "$SITE_PASSWORD" \
+              --remember 7 \
+              --template-title "Recipe Collection" \
+              --template-instructions "Enter the password to view recipes" \
+              --template-color-primary "#b8860b" \
+              --template-color-secondary "#9a7209" \
+              --template-button "Unlock" \
+              --template-error "Incorrect password" \
+              -d _site
           done
           echo "Encryption complete"
 
