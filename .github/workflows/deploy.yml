@@ -48,7 +48,7 @@ jobs:
           npm install -D pagecrypt
           for file in $(find _site -name "*.html" -type f); do
             echo "Encrypting: $file"
-            npx pagecrypt "$file" "$file" "$SITE_PASSWORD"
+            npx pagecrypt "$file" "$file" "$SITE_PASSWORD" -t _pagecrypt-template.html
           done
           echo "Encryption complete"
 
