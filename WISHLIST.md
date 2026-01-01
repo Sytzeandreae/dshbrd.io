@@ -11,10 +11,6 @@
 | Classic Roast Chicken | French | The ultimate test—if you can roast a chicken perfectly, you can cook anything. Teaches: heat management, resting, pan sauce |
 | Cacio e Pepe | Italian | Three ingredients, infinite lessons. Teaches: emulsification, pasta water as ingredient, timing |
 | French Omelette | French | Your morning meditation. Teaches: heat control, patience, knowing your pan |
-| Dal Tadka | Indian | Soul food that teaches spice blooming—the foundation of Indian cooking |
-| Miso Salmon | East-Asian | The gateway to Japanese flavor profiles. Teaches: marinating, broiling, umami layering |
-| Chicken Stock | French | Not a recipe—a ritual. The base of a thousand dishes. Teaches: extraction, aromatics, reduction |
-| Risotto (Mushroom or Seafood) | Italian | Active cooking as meditation. Teaches: toasting, deglazing, gradual hydration |
 | Thai Green Curry | Southeast-Asian | Complex flavor from simple technique. Teaches: curry paste building, coconut milk stages |
 | Pan-Seared Fish with Brown Butter | French | Crispy skin, moist flesh—the white whale. Teaches: Maillard reaction, butter management |
 | Hummus from Scratch | Middle-Eastern | The real thing bears no resemblance to store-bought. Teaches: tahini emulsion, acid balance |
@@ -29,7 +25,6 @@
 | Chicken Tikka Masala | Indian | The bridge between cultures. Teaches: tandoor-style cooking, building cream sauces |
 | Coq au Vin (Chicken Version) | French | Braising masterclass. Teaches: browning, fond development, wine reduction |
 | Pasta Aglio e Olio | Italian | Poverty food elevated to perfection. Teaches: garlic stages, chili oil infusion |
-| Miso Ramen Broth | East-Asian | Weekend project, weeknight reward. Teaches: layered broths, tare building |
 | Falafel | Middle-Eastern | The perfect crispy-fluffy ratio. Teaches: herb balance, frying temperature |
 | Chicken Tagine with Preserved Lemon | Middle-Eastern | Morocco in a pot. Teaches: braising, sweet-savory balance, preserved ingredients |
 | Greek Lemon Chicken (Kotopoulo Lemonato) | Mediterranean | Simple, bright, addictive. Teaches: acid braising, crispy skin in liquid |
@@ -38,6 +33,11 @@
 | Jamaican Jerk Chicken | Latin-American | Fiery, aromatic, unforgettable. Teaches: wet spice paste, marinating, high-heat grilling |
 | Rice and Peas | Latin-American | Jamaica's Sunday staple—coconut rice with kidney beans. Teaches: cooking rice in coconut milk, thyme infusion |
 | Fried Sweet Plantains (Maduros) | Latin-American | Caramelized edges, creamy centers. The perfect jerk chicken companion. Teaches: ripeness selection, frying temperatures |
+| Mujaddara | Middle-Eastern | Lentils, rice, and obscenely caramelized onions. Teaches: patience with alliums, lentil textures |
+| Aloo Gobi | Indian | The quintessential dry vegetable curry. Teaches: blooming spices, cooking without liquid |
+| Spanakopita | Mediterranean | Crispy phyllo, savory greens. Teaches: working with phyllo, wilting greens, feta balance |
+| Mushroom Bourguignon | French | All the depth of the classic, no beef. Teaches: braising technique, wine reduction, fond building |
+| Chana Masala | Indian | The chickpea curry everyone craves. Teaches: building tomato-based sauces (tomato as supporting) |
 
 ## Low Priority
 
@@ -55,6 +55,9 @@
 | Shrimp Étouffée | American | Louisiana soul. Teaches: roux stages, the holy trinity |
 | Fesenjan | Middle-Eastern | Persian walnut-pomegranate stew. Teaches: nut-thickened sauces, sweet-sour balance |
 | Moqueca (Brazilian Fish Stew) | Latin-American | Coconut, dendê oil, the sea. Teaches: Brazilian aromatics, gentle fish cooking |
+| Ribollita | Italian | Tuscan bread soup—frugal, nourishing, transformative. Teaches: building vegetable broths, bread as thickener |
+| Thai Larb (Mushroom) | Southeast-Asian | Fresh, bright, herbaceous. Teaches: Thai herb salads, toasted rice powder, lime-chili balance |
+| Potato Gnocchi | Italian | Pillowy clouds if done right, gummy if not. Teaches: potato handling, minimal flour technique |
 
 ## Technique Builders
 
