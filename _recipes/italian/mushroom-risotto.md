@@ -10,6 +10,7 @@ tags:
   - make-ahead
   - weeknight
   - special
+  - vegetarian
 ingredients:
   - group: "The Stock"
     items:

@@ -9,6 +9,7 @@ serves: 6
 tags:
   - make-ahead
   - batch
+  - vegetarian
 ingredients:
   - group: "The Eggplant"
     items:

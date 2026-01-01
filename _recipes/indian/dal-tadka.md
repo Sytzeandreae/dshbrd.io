@@ -11,6 +11,7 @@ tags:
   - freezable
   - batch
   - weeknight
+  - vegetarian
 ingredients:
   - group: "The Dal"
     items:

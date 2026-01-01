@@ -198,6 +198,7 @@ ingredients:
 - **batch** — Great for meal prep
 - **weeknight** — Easy enough for busy nights
 - **special** — Worth the extra effort
+- **vegetarian** — No meat or fish
 
 ## Cuisine Specializations
 

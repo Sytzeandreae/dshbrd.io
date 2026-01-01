@@ -12,6 +12,7 @@ tags:
   - batch
   - weeknight
   - one-pot
+  - vegetarian
 ingredients:
   - group: "The Base"
     items:

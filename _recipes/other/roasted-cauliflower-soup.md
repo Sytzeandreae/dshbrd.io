@@ -10,6 +10,7 @@ tags:
   - make-ahead
   - freezable
   - batch
+  - vegetarian
 ingredients:
   - group: "For the Soup"
     items:

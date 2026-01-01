@@ -10,6 +10,7 @@ tags:
   - make-ahead
   - batch
   - weeknight
+  - vegetarian
 ingredients:
   - group: "The Spinach Base"
     items:
